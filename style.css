@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #dadada;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.wrapper .image {
+    overflow: hidden;
+    height: 200px;
+    width: 22%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.wrapper .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.wrapper .image:hover img {
+    transform: scale(1.25);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.25s;
+}
+
+.gallery.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.gallery-inner {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+.control {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.gallery .prev {
+    left: 35px;
+    padding: 20px;
+}
+
+.gallery .next {
+    right: 35px;
+    padding: 20px;
+}
+
+.close {
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
